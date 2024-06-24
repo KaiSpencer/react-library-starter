@@ -1,0 +1,30 @@
+{
+  "name": "@react-library-starter/library",
+  "version": "0.0.0",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "build": "unbuild",
+    "build:stub": "unbuild --stub",
+    "typecheck": "tsc --noEmit",
+    "generate:component": "turbo gen react-component"
+  },
+  "devDependencies": {
+    "@react-library-starter/typescript-config": "workspace:*",
+    "@turbo/gen": "^1.12.4",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+    "typescript": "^5.5.2",
+    "unbuild": "^2.0.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
